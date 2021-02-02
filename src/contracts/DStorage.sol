@@ -46,8 +46,8 @@ function hashCompareWithLengthCheck( string memory _fileHash) public payable {
     // require (keccak256(abi. encodePacked(_fileHash)) != keccak256(abi. encodePacked(_ab)) ) ;
     // // Make sure the file hash exists
 
-    for(uint i=fileCount; i>=1; i--){
-      string memory _ab = hashArray[fileCount];
+    for(uint i=1; i<=fileCount; i++){
+      string memory _ab = hashArray[i];
       require (keccak256(abi. encodePacked(_fileHash)) != keccak256(abi. encodePacked(_ab)) ) ;
       
     }
